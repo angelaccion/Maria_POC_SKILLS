@@ -1,0 +1,11 @@
+{
+  "name": "maria-poc-skills",
+  "owner": { "name": "Angel Baby" },
+  "plugins": [
+    {
+      "name": "quick-brief",
+      "source": "./plugins/quick-brief",
+      "description": "Summarize pasted text into a single-paragraph brief."
+    }
+  ]
+}
