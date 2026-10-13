@@ -1,0 +1,30 @@
+{
+    "users":{
+    "angel.baby@accionlabs.com": "build-team",
+    "rajib.basu@accionlabs.com": "all-staff"
+  },
+  "groups": {
+    "build-team": {
+      "allowedPluginMarketplaces": [
+        {
+          "source": "github",
+          "repo": "angelaccion/Maria_POC_SKILLS",
+          "ref": "main",
+          "credentialKind": "anonymous",
+          "installationPreference": "available"
+        }
+      ],
+      "mcp_servers": ["maria-mcp-gateway"],
+      "available_models": ["claude-opus-4-8"],
+      "disabled_features": [],
+      "otlp_endpoint": "https://otel-collector.dev.internal:4318"
+    },
+    "all-staff": {
+      "allowedPluginMarketplaces": [],
+      "mcp_servers": ["maria-mcp-gateway"],
+      "available_models": ["claude-opus-4-8"],
+      "disabled_features": ["skills.authoring"],
+      "otlp_endpoint": "https://otel-collector.dev.internal:4318"
+    }
+  }
+}
