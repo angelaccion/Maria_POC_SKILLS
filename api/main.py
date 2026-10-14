@@ -37,6 +37,15 @@ def _load_policy() -> dict:
     return json.loads(POLICY_PATH.read_text())
 
 
+@app.get("/health")
+def health():
+    try:
+        _load_policy()
+    except (OSError, json.JSONDecodeError) as exc:
+        raise HTTPException(status_code=503, detail=f"Policy unavailable: {exc}")
+    return {"status": "ok"}
+
+
 @app.get("/bootstrap")
 def bootstrap(user: str):
     policy = _load_policy()
