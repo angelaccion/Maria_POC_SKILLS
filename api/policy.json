@@ -1,30 +1,25 @@
 {
-    "users":{
+  "default_group": "build-team",
+  "users": {
     "angel.baby@accionlabs.com": "build-team",
-    "rajib.basu@accionlabs.com": "all-staff"
+    "rajib.basu@accionlabs.com": "all-staff",
+    "angel.baby.accion@stirlingsquare.com": "build-team",
+    "rajib.basu.accion@stirlingsquare.com": "build-team"
   },
   "groups": {
     "build-team": {
-      "allowedPluginMarketplaces": [
-        {
-          "source": "github",
-          "repo": "angelaccion/Maria_POC_SKILLS",
-          "ref": "main",
-          "credentialKind": "anonymous",
-          "installationPreference": "available"
-        }
+      "skill_marketplaces": [
+        { "repo": "angelaccion/Maria_POC_SKILLS", "ref": "main" }
       ],
-      "mcp_servers": ["maria-mcp-gateway"],
-      "available_models": ["claude-opus-4-8"],
-      "disabled_features": [],
-      "otlp_endpoint": "https://otel-collector.dev.internal:4318"
+      "mcp_servers": [],
+      "available_models": ["claude-opus-4-7"],
+      "disabled_features": []
     },
     "all-staff": {
-      "allowedPluginMarketplaces": [],
-      "mcp_servers": ["maria-mcp-gateway"],
-      "available_models": ["claude-opus-4-8"],
-      "disabled_features": ["skills.authoring"],
-      "otlp_endpoint": "https://otel-collector.dev.internal:4318"
+      "skill_marketplaces": [],
+      "mcp_servers": [],
+      "available_models": ["claude-opus-4-7"],
+      "disabled_features": ["skills.authoring"]
     }
   }
 }
