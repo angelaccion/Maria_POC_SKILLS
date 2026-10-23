@@ -1,11 +1,18 @@
 {
   "name": "maria-poc-skills",
-  "owner": { "name": "Angel Baby" },
+  "owner": {
+    "name": "Angel Baby"
+  },
   "plugins": [
     {
       "name": "quick-brief",
       "source": "./plugins/quick-brief",
       "description": "Summarize pasted text into a single-paragraph brief."
+    },
+    {
+      "name": "prompt-architect",
+      "source": "./plugins/prompt-architect",
+      "description": "Turn a rough request into a strong, SSCP-aligned prompt."
     }
   ]
 }
